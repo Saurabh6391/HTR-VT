@@ -1,20 +1,8 @@
-Here is your **complete final `README.md`**
-✔ No words changed
-✔ Only formatting improved
-✔ Images fixed
-✔ Tree structures correct
-✔ Clickable links
-✔ Clean GitHub rendering
 
----
-
-````md
 # 📙 LM-HTR: Learnable Masking Attention for Historical Text Recognition
 
 <p align="center">
-  <a href="#">
-    <img src="https://img.shields.io/badge/Paper-PRL-blue">
-  </a>
+  
   <a href="https://drive.google.com/drive/folders/1HuucUqMokyE3_bmXoBkrWcnpwWA9wFPk?usp=sharing">
     <img src="https://img.shields.io/badge/Dataset-Download-green">
   </a>
@@ -75,7 +63,7 @@ Unlike standard Vision Transformers, our approach suppresses noisy background re
 ## 📊 Visual Results
 
 <p align="center">
-  <img src="paper_images/result2.png" width="45%">
+  <img src="paper_images/result (2).png" width="45%">
 </p>
 
 The framework follows a CNN → Transformer → CTC pipeline:
