@@ -1,4 +1,4 @@
-#Mistral_AI.ipynb
+# Mistral_AI.ipynb
 
 !unzip /content/test.zip
 
