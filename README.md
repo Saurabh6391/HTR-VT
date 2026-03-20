@@ -64,20 +64,18 @@ The framework follows a CNN → Transformer → CTC pipeline:
 HTR-VT/
 │
 ├── data/                      # Dataset storage
-├── Deformable_attention/     # Deformable attention modules
-├── Learnablemaskingattention/ # Masking attention implementation
-├── lines_img/                # Input line images
-├── Mistral_API/              # OCR API comparison scripts
-├── Paper_image/              # Figures for README / paper
-├── Result/                   # Output predictions
-├── run/                      # Training & testing scripts
-├── utils/                    # Utility functions
+├── deformable_attention/      # Deformable attention modules
+├── learnable_masking_attention/ # Masking attention implementation
+├── line_images/               # Input line images
+├── mistral_api/               # OCR API comparison scripts
+├── paper_images/              # Figures for README / paper
+├── results/                   # Output predictions
+├── scripts/                   # Training & testing scripts
+├── utils/                     # Utility functions
+├── example/                   # Example files
 │
-├── train.py                  # Training script
-├── test.py                   # Testing script
-├── valid.py                  # Validation script
-├── environment.yml           # Environment setup
-├── README.md                 # Project documentation
+├── environment.yaml           # Environment setup
+├── README.md                  # Project documentation
 └── .gitignore
 
 
@@ -86,7 +84,7 @@ HTR-VT/
 🔹 Step 1: Create Environment
 
 bash
-conda env create -f environment.yml
+conda env create -f environment.yaml
 conda activate htr
 
 
@@ -124,24 +122,24 @@ data/
 🔹 Train Model
 
 bash
-python train.py
+python scripts/train.py
 
 
 🔹 Validate
 
 bash
-python valid.py
+python scripts/valid.py
 
 
 🔹 Test
 
 bash
-python test.py
+python scripts/test.py
 
 
 Predefined scripts are available in:
 
-./run/
+./scripts/
 
 
 📈 Results
