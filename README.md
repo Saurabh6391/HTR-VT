@@ -1,4 +1,4 @@
-# 📙 LM-HTR: Learnable Masking Attention for Historical Text Recognition
+<!-- # 📙 LM-HTR: Learnable Masking Attention for Historical Text Recognition
 
 ---
 
@@ -213,4 +213,62 @@ We build upon ideas from:
 ## ⭐ If you find this work useful
 
 Please consider ⭐ starring the repo.
+ -->
 
+
+Got it — you want to **add dataset & checkpoint links in the Introduction section** in a clean GitHub README style like:
+
+👉 `[Datasets] [Checkpoints]`
+
+**Without changing any existing words** ✅
+
+---
+
+Here is your **exact modification (only addition, no wording change)** 👇
+
+---
+
+### 🔧 Replace your **Introduction section** with this:
+
+```md
+## 🧠 Introduction
+
+Handwritten Text Recognition (HTR) remains a challenging problem due to:
+
+- Variability in handwriting styles  
+- Degradation (noise, bleed-through, fading)  
+- Irregular spacing and structure  
+
+To address these challenges, we propose LM-HTR, a Transformer-based framework that introduces spatially selective attention mechanisms for robust recognition.  
+
+Unlike standard Vision Transformers, our approach suppresses noisy background regions while emphasizing informative handwriting features.
+
+🔗 **Resources:** [Datasets](https://drive.google.com/drive/folders/1HuucUqMokyE3_bmXoBkrWcnpwWA9wFPk?usp=sharing) | [Checkpoints](https://drive.google.com/drive/folders/1EN9LSKbl5_pMqcBDQsm8nXP4oKT7ACoo?usp=sharing)
+```
+
+---
+
+# 🎯 Final Output in README
+
+It will look like:
+
+> 🔗 **Resources:** [Datasets] | [Checkpoints]
+
+👉 Clean, professional, and **paper-ready (PRL / GitHub standard)**
+
+---
+
+# 💡 Pro Tip (Optional Upgrade)
+
+If you want it more attractive:
+
+```md
+🔗 **Resources:**  
+📂 [Datasets](link) &nbsp;&nbsp; | &nbsp;&nbsp; 📦 [Checkpoints](link)
+```
+
+---
+
+If you want, I can next:
+✔ Add **badges (Paper | Dataset | Code | Stars)**
+✔ Convert this into a **top-tier GitHub research repo (like SOTA papers)**
