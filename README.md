@@ -14,9 +14,9 @@
 
 Handwritten Text Recognition (HTR) remains a challenging problem due to:
 
-- Variability in handwriting styles  
-- Degradation (noise, bleed-through, fading)  
-- Irregular spacing and structure  
+Variability in handwriting styles  
+Degradation (noise, bleed-through, fading)  
+Irregular spacing and structure  
 
 To address these challenges, we propose LM-HTR, a Transformer-based framework that introduces spatially selective attention mechanisms for robust recognition.  
 
@@ -25,7 +25,7 @@ Unlike standard Vision Transformers, our approach suppresses noisy background re
 🔗 Resources:[Datasets](https://drive.google.com/drive/folders/1HuucUqMokyE3_bmXoBkrWcnpwWA9wFPk?usp=sharing) 
 | [Checkpoints](https://drive.google.com/drive/folders/1EN9LSKbl5_pMqcBDQsm8nXP4oKT7ACoo?usp=sharing)
 
----
+
 
 🚀 Key Contributions
 
@@ -36,21 +36,21 @@ Unlike standard Vision Transformers, our approach suppresses noisy background re
 
 👉 As highlighted in your work:
 
-- Better CER/WER across datasets  
-- Strong performance in degraded manuscripts  
-- Fully end-to-end training with CTC loss  
+Better CER/WER across datasets  
+Strong performance in degraded manuscripts  
+Fully end-to-end training with CTC loss  
 
----
 
-## 🏗️ Architecture Overview
+
+🏗️ Architecture Overview
 
 <p align="center">
   <img src="paper_images/Main_Model.png" width="700px">
 </p>
 
----
 
-## 📊 Visual Results
+
+📊 Visual Results
 
 <p align="center">
   <img src="paper_images/Result (2).png" width="45%">
@@ -63,11 +63,11 @@ The framework follows a CNN → Transformer → CTC pipeline:
 3. Spatial attention (masking / deformable) enhances focus  
 4. CTC decodes final text sequence  
 
----
 
-## 📂 Repository Structure
 
-```
+📂 Repository Structure
+
+
 
 HTR-VT/
 │
@@ -86,38 +86,38 @@ HTR-VT/
 ├── README.md                     # Project documentation
 └── .gitignore
 
-````
 
----
 
-## ⚙️ Installation
 
-### 🔹 Step 1: Create Environment
 
-```bash
+⚙️ Installation
+
+🔹 Step 1: Create Environment
+
+bash
 conda env create -f environment.yaml
 conda activate htr
-````
 
-### 🔹 Requirements
 
-* Python 3.9
-* PyTorch 1.13
-* GPU recommended (RTX 4090 or similar)
+🔹 Requirements
 
----
+ Python 3.9
+ PyTorch 1.13
+ GPU recommended (RTX 4090 or similar)
 
-## 📊 Datasets
+
+
+📊 Datasets
 
 We evaluate on:
 
-* IAM (English handwriting)
-* READ2016 (historical German manuscripts)
-* LAM (Italian historical dataset)
+IAM (English handwriting)
+READ2016 (historical German manuscripts)
+LAM (Italian historical dataset)
 
-### 📁 Expected Structure
+📁 Expected Structure
 
-```
+
 data/
  └── iam/
      ├── train.ln
@@ -126,42 +126,37 @@ data/
      └── lines/
          ├── xxx.png
          ├── xxx.txt
-```
 
----
 
-## ▶️ Quick Start
+▶️ Quick Start
 
-### 🔹 Train Model
+🔹 Train Model
 
-```bash
+bash
 python scripts/train.py
-```
 
-### 🔹 Validate
 
-```bash
+🔹 Validate
+
+bash
 python scripts/valid.py
-```
 
-### 🔹 Test
 
-```bash
+🔹 Test
+
+bash
 python scripts/test.py
-```
+
 
 Predefined scripts are available in:
 
-```
+
 ./scripts/
-```
 
----
 
-## 📈 Results
+📈 Results
 
 | Dataset  | CER (%) | WER (%) |
-| -------- | ------- | ------- |
 | LAM      | 3.60    | 9.94    |
 | READ2016 | 4.27    | 17.83   |
 | IAM      | 4.97    | 16.24   |
@@ -170,53 +165,52 @@ Predefined scripts are available in:
 ✔ Better robustness on degraded manuscripts
 ✔ Strong performance without external resources
 
----
 
-## 🔍 Comparison with OCR APIs
+🔍 Comparison with OCR APIs
 
 We also evaluate against:
 
-* Mistral OCR
-* Gemini OCR
+Mistral OCR
+Gemini OCR
 
 👉 Findings:
 
-* Poor performance on degraded datasets
-* High error rates without adaptation
-* Domain mismatch for historical manuscripts
+Poor performance on degraded datasets
+High error rates without adaptation
+Domain mismatch for historical manuscripts
 
----
 
-## 🧪 Evaluation Metrics
+
+🧪 Evaluation Metrics
 
 We use:
 
-* Character Error Rate (CER)
-* Word Error Rate (WER)
+Character Error Rate (CER)
+Word Error Rate (WER)
 
 Both computed using Levenshtein distance.
 
----
 
-## 🔮 Future Work
 
-* Hybrid attention (masking + deformable)
-* Self-supervised pretraining
-* Paragraph-level recognition
-* Language-aware decoding
+🔮 Future Work
 
----
+Hybrid attention (masking + deformable)
+Self-supervised pretraining
+Paragraph-level recognition
+Language-aware decoding
 
-## 🙏 Acknowledgement
+
+
+🙏 Acknowledgement
 
 We build upon ideas from:
 
-* Transformer-based HTR models
-* Deformable attention frameworks
-* Masked attention techniques
+Transformer-based HTR models
+Deformable attention frameworks
+Masked attention techniques
 
----
 
-## ⭐ If you find this work useful
+
+
 
 
