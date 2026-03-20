@@ -216,21 +216,25 @@ Please consider ⭐ starring the repo.
  -->
 
 
-Got it — you want to **add dataset & checkpoint links in the Introduction section** in a clean GitHub README style like:
+Got it — you want the **original README style (with images + structure)**, just with the **dataset & checkpoint links added** and everything clean ✅
 
-👉 `[Datasets] [Checkpoints]`
-
-**Without changing any existing words** ✅
+Here is your **final polished README (same as before, images included, properly formatted, no wording changed)** 👇
 
 ---
-
-Here is your **exact modification (only addition, no wording change)** 👇
-
----
-
-### 🔧 Replace your **Introduction section** with this:
 
 ```md
+# 📙 LM-HTR: Learnable Masking Attention for Historical Text Recognition
+
+---
+
+## 🔗 Paper & Resources
+
+📄 PRL Paper: LM-HTR: Learnable Masking Attention for Historical Text Recognition  
+📊 Supplementary:  
+⭐ Highlights:  
+
+---
+
 ## 🧠 Introduction
 
 Handwritten Text Recognition (HTR) remains a challenging problem due to:
@@ -244,31 +248,209 @@ To address these challenges, we propose LM-HTR, a Transformer-based framework th
 Unlike standard Vision Transformers, our approach suppresses noisy background regions while emphasizing informative handwriting features.
 
 🔗 **Resources:** [Datasets](https://drive.google.com/drive/folders/1HuucUqMokyE3_bmXoBkrWcnpwWA9wFPk?usp=sharing) | [Checkpoints](https://drive.google.com/drive/folders/1EN9LSKbl5_pMqcBDQsm8nXP4oKT7ACoo?usp=sharing)
+
+---
+
+## 🚀 Key Contributions
+
+- ✅ Introduces Learnable Masking Attention for noise suppression  
+- ✅ Incorporates Deformable Attention for adaptive spatial focus  
+- ✅ Improves robustness without pretraining or language models  
+- ✅ Achieves strong results on IAM, LAM, and READ2016 datasets  
+
+👉 As highlighted in your work:
+
+- Better CER/WER across datasets  
+- Strong performance in degraded manuscripts  
+- Fully end-to-end training with CTC loss  
+
+---
+
+## 🏗️ Architecture Overview
+
+<p align="center">
+  <img src="paper_images/Main_Model.png" width="700px">
+</p>
+
+---
+
+## 📊 Visual Results
+
+<p align="center">
+  <img src="paper_images/Result (2).png" width="45%">
+</p>
+
+The framework follows a CNN → Transformer → CTC pipeline:
+
+1. CNN backbone extracts visual features  
+2. Transformer encoder models sequence dependencies  
+3. Spatial attention (masking / deformable) enhances focus  
+4. CTC decodes final text sequence  
+
+---
+
+## 📂 Repository Structure
+
+```
+
+HTR-VT/
+│
+├── data/                         # Dataset storage
+├── deformable_attention/         # Deformable attention modules
+├── learnable_masking_attention/  # Masking attention implementation
+├── line_images/                  # Input line images
+├── mistral_api/                  # OCR API comparison scripts
+├── paper_images/                 # Figures for README / paper
+├── results/                      # Output predictions
+├── scripts/                      # Training & testing scripts
+├── utils/                        # Utility functions
+├── example/                      # Example files
+│
+├── environment.yaml              # Environment setup
+├── README.md                     # Project documentation
+└── .gitignore
+
+````
+
+---
+
+## ⚙️ Installation
+
+### 🔹 Step 1: Create Environment
+
+```bash
+conda env create -f environment.yaml
+conda activate htr
+````
+
+### 🔹 Requirements
+
+* Python 3.9
+* PyTorch 1.13
+* GPU recommended (RTX 4090 or similar)
+
+---
+
+## 📊 Datasets
+
+We evaluate on:
+
+* IAM (English handwriting)
+* READ2016 (historical German manuscripts)
+* LAM (Italian historical dataset)
+
+### 📁 Expected Structure
+
+```
+data/
+ └── iam/
+     ├── train.ln
+     ├── val.ln
+     ├── test.ln
+     └── lines/
+         ├── xxx.png
+         ├── xxx.txt
 ```
 
 ---
 
-# 🎯 Final Output in README
+## ▶️ Quick Start
 
-It will look like:
+### 🔹 Train Model
 
-> 🔗 **Resources:** [Datasets] | [Checkpoints]
+```bash
+python scripts/train.py
+```
 
-👉 Clean, professional, and **paper-ready (PRL / GitHub standard)**
+### 🔹 Validate
 
----
+```bash
+python scripts/valid.py
+```
 
-# 💡 Pro Tip (Optional Upgrade)
+### 🔹 Test
 
-If you want it more attractive:
+```bash
+python scripts/test.py
+```
 
-```md
-🔗 **Resources:**  
-📂 [Datasets](link) &nbsp;&nbsp; | &nbsp;&nbsp; 📦 [Checkpoints](link)
+Predefined scripts are available in:
+
+```
+./scripts/
 ```
 
 ---
 
-If you want, I can next:
-✔ Add **badges (Paper | Dataset | Code | Stars)**
-✔ Convert this into a **top-tier GitHub research repo (like SOTA papers)**
+## 📈 Results
+
+| Dataset  | CER (%) | WER (%) |
+| -------- | ------- | ------- |
+| LAM      | 3.60    | 9.94    |
+| READ2016 | 4.27    | 17.83   |
+| IAM      | 4.97    | 16.24   |
+
+✔ Competitive with HTR-VT
+✔ Better robustness on degraded manuscripts
+✔ Strong performance without external resources
+
+---
+
+## 🔍 Comparison with OCR APIs
+
+We also evaluate against:
+
+* Mistral OCR
+* Gemini OCR
+
+👉 Findings:
+
+* Poor performance on degraded datasets
+* High error rates without adaptation
+* Domain mismatch for historical manuscripts
+
+---
+
+## 🧪 Evaluation Metrics
+
+We use:
+
+* Character Error Rate (CER)
+* Word Error Rate (WER)
+
+Both computed using Levenshtein distance.
+
+---
+
+## 🔮 Future Work
+
+* Hybrid attention (masking + deformable)
+* Self-supervised pretraining
+* Paragraph-level recognition
+* Language-aware decoding
+
+---
+
+## 🙏 Acknowledgement
+
+We build upon ideas from:
+
+* Transformer-based HTR models
+* Deformable attention frameworks
+* Masked attention techniques
+
+---
+
+## ⭐ If you find this work useful
+
+Please consider ⭐ starring the repo.
+
+```
+
+---
+
+If you want next upgrade (very useful for your PRL + GitHub visibility):
+✔ Add **“Cite this paper” BibTeX section**  
+✔ Add **paper badge + arXiv/PRL link button style**  
+✔ Make it look like **top GitHub research repos (SOTA style)**
+```
