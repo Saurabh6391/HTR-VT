@@ -60,7 +60,6 @@ The framework follows a CNN → Transformer → CTC pipeline:
 
 📂 Repository Structure
 
-
 HTR-VT/
 │
 ├── data/                      # Dataset storage
@@ -107,7 +106,6 @@ LAM (Italian historical dataset)
 
 📁 Expected Structure
 
-```
 data/
  └── iam/
      ├── train.ln
@@ -116,7 +114,6 @@ data/
      └── lines/
          ├── xxx.png
          ├── xxx.txt
-```
 
 
 ▶️ Quick Start
