@@ -6,7 +6,7 @@ import numpy as np
 from model import resnet18
 from functools import partial
 
-#### ---- DEFORMABLE ATTENTION ---- ####
+#### DEFORMABLE ATTENTION 
 
 class DeformableAttention(nn.Module):
     def __init__(self, dim, num_heads=8, num_points=4, offset_range=3, qkv_bias=True, attn_drop=0., proj_drop=0.):
@@ -66,7 +66,7 @@ class DeformableAttention(nn.Module):
         out = self.proj_drop(out)
         return out
 
-#### ---- LAYER SCALE ---- ####
+#### LAYER SCALE 
 
 class LayerScale(nn.Module):
     def __init__(self, dim, init_values=1e-5, inplace=False):
@@ -77,7 +77,7 @@ class LayerScale(nn.Module):
     def forward(self, x):
         return x.mul_(self.gamma) if self.inplace else x * self.gamma
 
-#### ---- BLOCK CLASS ---- ####
+#### BLOCK CLASS 
 
 class Block(nn.Module):
     def __init__(self, dim, num_heads, num_patches,
@@ -107,7 +107,7 @@ class Block(nn.Module):
         x = x + self.drop_path2(self.ls2(self.mlp(self.norm2(x))))
         return x
 
-#### ---- POSITIONAL EMBEDDING AND SUPPORT ---- ####
+#### POSITIONAL EMBEDDING AND SUPPORT 
 
 def get_2d_sincos_pos_embed(embed_dim, grid_size):
     grid_h = np.arange(grid_size[0], dtype=np.float32)
@@ -141,7 +141,7 @@ class LayerNorm(nn.Module):
     def forward(self, x):
         return F.layer_norm(x, x.size()[1:], weight=None, bias=None, eps=1e-05)
 
-#### ---- VISION TRANSFORMER (MODEL) ---- ####
+####  VISION TRANSFORMER (MODEL) 
 
 class MaskedAutoencoderViT(nn.Module):
     def __init__(self, nb_cls=80, img_size=[512, 32],
