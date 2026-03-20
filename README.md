@@ -2,7 +2,6 @@
 
 <p align="center">
 
-[![Paper](https://img.shields.io/badge/Paper-PRL-blue)](#)
 [![Dataset](https://img.shields.io/badge/Dataset-Download-green)](https://drive.google.com/drive/folders/1HuucUqMokyE3_bmXoBkrWcnpwWA9wFPk?usp=sharing)
 [![Checkpoints](https://img.shields.io/badge/Checkpoints-Download-orange)](https://drive.google.com/drive/folders/1EN9LSKbl5_pMqcBDQsm8nXP4oKT7ACoo?usp=sharing)
 
@@ -35,7 +34,7 @@ Unlike standard Vision Transformers, our approach suppresses noisy background re
 
 
 
-## 🚀 Key Contributions
+🚀 Key Contributions
 
 - Introduces Learnable Masking Attention for noise suppression  
 - Incorporates Deformable Attention for adaptive spatial focus  
@@ -59,8 +58,9 @@ As highlighted in your work:
 📊 Visual Results
 
 <p align="center">
-  <img src="paper_images/result (2).png" width="45%">
+  <img src="paper_images/Result (2).png" width="45%">
 </p>
+
 The framework follows a CNN → Transformer → CTC pipeline:
 
 1. CNN backbone extracts visual features  
@@ -70,9 +70,8 @@ The framework follows a CNN → Transformer → CTC pipeline:
 
 
 
-## 📂 Repository Structure
+📂 Repository Structure
 
-```bash
 HTR-VT/
 ├── data/                         # Dataset storage
 ├── deformable_attention/         # Deformable attention modules
@@ -88,25 +87,24 @@ HTR-VT/
 ├── README.md                     # Project documentation
 └── .gitignore
 
+
 ⚙️ Installation
 
 Step 1: Create Environment
 
-```bash
 conda env create -f environment.yaml
 conda activate htr
-````
+
 
 Requirements
 
-* Python 3.9
-* PyTorch 1.13
-* GPU recommended
+Python 3.9
+PyTorch 1.13
+GPU recommended
 
  
 📁 Datasets
 
-```bash
 data/
 └── iam/
     ├── train.ln
@@ -115,38 +113,32 @@ data/
     └── lines/
         ├── xxx.png
         └── xxx.txt
----
+        
 
 ▶️ Quick Start
 
 Train
 
-```bash
 python scripts/train.py
-```
 
 Validate
 
-```bash
 python scripts/valid.py
-```
+
 
 Test
 
-```bash
 python scripts/test.py
-```
+
 
 Scripts available in:
 
-```
 ./scripts/
-```
+
 
 📈 Results
 
 | Dataset  | CER (%) | WER (%) |
-| -------- | ------- | ------- |
 | LAM      | 3.60    | 9.94    |
 | READ2016 | 4.27    | 17.83   |
 | IAM      | 4.97    | 16.24   |
@@ -155,15 +147,14 @@ Scripts available in:
 
 🔍 Comparison with OCR APIs
 
-Mistral OCR
-Gemini OCR
-
+- Mistral OCR  
+- Gemini OCR
+  
 Findings:
 
-Poor performance on degraded datasets
-High error rates without adaptation
-Domain mismatch for historical manuscripts
-
+- Poor performance on degraded datasets  
+- High error rates without adaptation  
+- Domain mismatch for historical manuscripts  
 
 🧪 Evaluation Metrics
 
@@ -174,16 +165,16 @@ Computed using Levenshtein distance.
 
 🔮 Future Work
 
-Hybrid attention
-Self-supervised pretraining
-Paragraph-level recognition
-Language-aware decoding
+- Hybrid attention  
+- Self-supervised pretraining  
+- Paragraph-level recognition  
+- Language-aware decoding
 
 🙏 Acknowledgement
 
-Transformer-based HTR models
-Deformable attention frameworks
-Masked attention techniques
+- Transformer-based HTR models  
+- Deformable attention frameworks  
+- Masked attention techniques  
 
 ⭐ Support
 
