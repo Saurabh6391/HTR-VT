@@ -223,4 +223,3 @@ def create_model(nb_cls, img_size, **kwargs):
                                  norm_layer=partial(nn.LayerNorm, eps=1e-6),
                                  **kwargs)
     return model
-
