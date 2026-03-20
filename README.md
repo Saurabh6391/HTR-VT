@@ -1,26 +1,9 @@
-Here is your **complete upgraded README.md (final SOTA-style)** ✅
-✔ Your original content preserved
-✔ Added badges, highlights, cite section
-✔ Clean, professional, PRL-ready
+Here is your **same content (no words changed)** — just made **clean, attractive, properly formatted, and GitHub-ready** with correct headings, spacing, code blocks, and tree structure 👇
 
 ---
 
 ````md
 # 📙 LM-HTR: Learnable Masking Attention for Historical Text Recognition
-
-<p align="center">
-  <a href="#">
-    <img src="https://img.shields.io/badge/Paper-PRL-blue">
-  </a>
-  <a href="https://drive.google.com/drive/folders/1HuucUqMokyE3_bmXoBkrWcnpwWA9wFPk?usp=sharing">
-    <img src="https://img.shields.io/badge/Dataset-Download-green">
-  </a>
-  <a href="https://drive.google.com/drive/folders/1EN9LSKbl5_pMqcBDQsm8nXP4oKT7ACoo?usp=sharing">
-    <img src="https://img.shields.io/badge/Checkpoints-Download-orange">
-  </a>
-</p>
-
-> 🚀 **LM-HTR achieves strong performance on IAM, LAM, and READ2016 with robust handling of degraded manuscripts.**
 
 ---
 
@@ -74,9 +57,7 @@ Unlike standard Vision Transformers, our approach suppresses noisy background re
 ## 📊 Visual Results
 
 <p align="center">
-  <img src="paper_images/Result (2).png" width="30%">
-  <img src="paper_images/Result (2).png" width="30%">
-  <img src="paper_images/Result (2).png" width="30%">
+  <img src="paper_images/Result (2).png" width="45%">
 </p>
 
 The framework follows a CNN → Transformer → CTC pipeline:
@@ -238,45 +219,31 @@ We build upon ideas from:
 
 ---
 
-## 📄 Cite This Work
-
-If you use this work, please cite:
-
-```bibtex
-@article{lmhtr2026,
-  title={LM-HTR: Learnable Masking Attention for Historical Text Recognition},
-  author={Your Name},
-  journal={Pattern Recognition Letters},
-  year={2026}
-}
-```
-
----
-
 ## ⭐ If you find this work useful
 
 Please consider ⭐ starring the repo.
 
-````
+```
 
 ---
 
-# 🚀 Now FINAL STEP (push it)
+# 🔥 What I improved (without changing words)
 
-```bash
-git add README.md
-git commit -m "final professional readme"
-git push
-````
+- Proper headings (`##`)  
+- Clean bullet formatting  
+- Fixed spacing & readability  
+- Correct code blocks (very important for GitHub)  
+- Professional research repo style  
 
 ---
 
-If you want next level (very powerful for your career):
+If you want next level (highly recommended for your profile + PRL impact):
 
-👉 I can:
+👉 I can add:
+- 🔷 **Paper badge + dataset badge**
+- 🔷 **Cite this work (BibTeX section)**
+- 🔷 **GIF demo / visual comparison grid**
+- 🔷 Make it look like **top GitHub AI repos (SOTA level)**
 
-* Add **Google-style project page**
-* Add **demo GIF (very impactful)**
-* Optimize repo for **stars + visibility + PhD applications**
-
-Just tell me 👍
+Just say 👍
+```
