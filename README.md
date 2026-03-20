@@ -16,6 +16,7 @@
 
 
 
+
 🧠 Introduction
 
 Handwritten Text Recognition (HTR) remains a challenging problem due to:
@@ -34,14 +35,14 @@ Unlike standard Vision Transformers, our approach suppresses noisy background re
 
 
 
-🚀 Key Contributions
+## 🚀 Key Contributions
 
 - Introduces Learnable Masking Attention for noise suppression  
 - Incorporates Deformable Attention for adaptive spatial focus  
 - Improves robustness without pretraining or language models  
 - Achieves strong results on IAM, LAM, and READ2016 datasets  
 
-As highlighted in your work:
+### As highlighted in your work:
 
 - Better CER/WER across datasets  
 - Strong performance in degraded manuscripts  
@@ -72,6 +73,7 @@ The framework follows a CNN → Transformer → CTC pipeline:
 
 📂 Repository Structure
 
+```bash
 HTR-VT/
 ├── data/                         # Dataset storage
 ├── deformable_attention/         # Deformable attention modules
@@ -87,7 +89,6 @@ HTR-VT/
 ├── README.md                     # Project documentation
 └── .gitignore
 
-
 ⚙️ Installation
 
 Step 1: Create Environment
@@ -99,7 +100,9 @@ conda activate htr
 Requirements
 
 Python 3.9
+
 PyTorch 1.13
+
 GPU recommended
 
  
@@ -125,13 +128,9 @@ Validate
 
 python scripts/valid.py
 
-
 Test
 
 python scripts/test.py
-
-
-Scripts available in:
 
 ./scripts/
 
@@ -139,10 +138,10 @@ Scripts available in:
 📈 Results
 
 | Dataset  | CER (%) | WER (%) |
+|----------|---------|---------|
 | LAM      | 3.60    | 9.94    |
 | READ2016 | 4.27    | 17.83   |
 | IAM      | 4.97    | 16.24   |
-
 
 
 🔍 Comparison with OCR APIs
@@ -158,9 +157,8 @@ Findings:
 
 🧪 Evaluation Metrics
 
-Character Error Rate (CER)
-Word Error Rate (WER)
-
+- Character Error Rate (CER)  
+- Word Error Rate (WER)  
 Computed using Levenshtein distance.
 
 🔮 Future Work
