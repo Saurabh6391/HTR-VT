@@ -64,6 +64,7 @@ The framework follows a CNN → Transformer → CTC pipeline:
 
 ## 📂 Repository Structure
 
+```
 HTR-VT/
 │
 ├── data/                         # Dataset storage
@@ -80,6 +81,7 @@ HTR-VT/
 ├── environment.yaml              # Environment setup
 ├── README.md                     # Project documentation
 └── .gitignore
+```
 
 ---
 
@@ -110,6 +112,7 @@ We evaluate on:
 
 ### 📁 Expected Structure
 
+```
 data/
  └── iam/
      ├── train.ln
@@ -118,6 +121,7 @@ data/
      └── lines/
          ├── xxx.png
          ├── xxx.txt
+```
 
 ---
 
