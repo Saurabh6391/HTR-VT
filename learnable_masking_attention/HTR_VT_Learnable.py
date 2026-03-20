@@ -1,3 +1,5 @@
+# Learnable_masking_attention
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -96,7 +98,7 @@ class LayerNorm(nn.Module):
         return F.layer_norm(x, x.size()[1:], weight=None, bias=None, eps=1e-05)
 
 
-# ---------------- Learnable Mask Predictor ----------------
+#  Learnable Mask Predictor 
 class MaskPredictor(nn.Module):
     def __init__(self, embed_dim):
         super().__init__()
@@ -111,9 +113,9 @@ class MaskPredictor(nn.Module):
         return self.fc(x)
 
 
-# ---------------- Main Model ----------------
+# Main Model 
 class MaskedAutoencoderViT(nn.Module):
-    """Masked Autoencoder ViT with Learnable Masking"""
+    ""Masked Autoencoder ViT with Learnable Masking""
 
     def __init__(self,
                  nb_cls=80,
