@@ -40,13 +40,13 @@ Fully end-to-end training with CTC loss
 🏗️ Architecture Overview
 
 <p align="center">
-  <img src="Paper_image/Main_Model.png" width="700px">
+  <img src="paper_images/Main_Model.png" width="700px">
 </p>
 
 ## 📊 Visual Results
 
 <p align="center">
-  <img src="images/result (2).png" width="45%">
+  <img src="paper_images/Result (2).png" width="45%">
 </p>
 
 The framework follows a CNN → Transformer → CTC pipeline:
