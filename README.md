@@ -174,16 +174,6 @@ Scripts available in:
 
 ---
 
-## 🔍 Comparison with OCR APIs
-
-* Mistral OCR
-* Gemini OCR
-
-Findings:
-
-* Poor performance on degraded datasets
-* High error rates without adaptation
-* Domain mismatch for historical manuscripts
 
 ---
 
@@ -193,30 +183,4 @@ Findings:
 * Word Error Rate (WER)
 
 ---
-
-## 🔮 Future Work
-
-* Hybrid attention
-* Self-supervised pretraining
-* Paragraph-level recognition
-* Language-aware decoding
-
----
-
-## 🙏 Acknowledgement
-
-* Transformer-based HTR models
-* Deformable attention frameworks
-* Masked attention techniques
-
----
-
-
-
-## ⭐ If you find this work useful
-
-Please consider ⭐ starring the repo.
-
-
-
 
