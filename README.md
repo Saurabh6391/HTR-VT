@@ -164,6 +164,17 @@ Scripts available in:
 
 ---
 
+---
+
+## 🧪 Evaluation Metrics
+
+* Character Error Rate (CER)
+* Word Error Rate (WER)
+
+---
+
+
+
 ## 📈 Results
 
 | Dataset  | CER (%) | WER (%) |
@@ -175,12 +186,5 @@ Scripts available in:
 ---
 
 
----
 
-## 🧪 Evaluation Metrics
-
-* Character Error Rate (CER)
-* Word Error Rate (WER)
-
----
 
