@@ -55,7 +55,7 @@ Unlike standard Vision Transformers, our approach suppresses noisy background re
 ## 🏗️ Architecture Overview
 
 <p align="center">
-  <img src="paper_images/Main_Model.png" width="700px">
+  <img src="paper_images/LM-HTR-Copy of AI-Reader-Architecture.drawio.png" width="700px">
 </p>
 
 ---
